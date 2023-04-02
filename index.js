@@ -15,7 +15,7 @@ function handleClickLogin(){
       var guestPass = document.getElementById("pass").value;
       // alert("Добро пожаловать, "+guestName+"! " + guestPassList[guestList.indexOf(guestName)]);
 
-      if (guestPassList.includes(guestPass)) {
+      if (guestPass == guestPassList[guestList.indexOf(guestName)]) {
         alert("Добро пожаловать, "+guestName+"!");
       } else {
         alert("Неверный пароль!");
