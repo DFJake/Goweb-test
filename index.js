@@ -1,11 +1,11 @@
-var guestList = ["Angela"];
-var guestPassList = ["Angelapass"];
+var guestList = ["Angela","Ibra"];
+var guestPassList = ["Angelapass","Ibrapass"];
 var guestName;
 var guestPass;
 
 
 
-// Login button
+// Login button - обработчик кнопки логина
 document.querySelectorAll("button")[0].addEventListener("click", handleClickLogin);
 
 function handleClickLogin(){
@@ -31,7 +31,7 @@ function handleClickLogin(){
 
 }
 
-// Sign-in button
+// Sign-in button - обратотчик кнопки регистрации
 document.querySelectorAll("button")[1].addEventListener("click", handleClickSignin);
 
 function handleClickSignin(){
