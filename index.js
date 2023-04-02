@@ -46,3 +46,11 @@ function handleClickSignin(){
 }
 
 }
+
+
+document.getElementById("calc-wt").addEventListener("click", handleClickCalcwt);
+
+function handleClickCalcwt(){
+  var v_weight = document.getElementById("weight").value;
+  document.getElementById("labcalc").innerHTML = (v_weight * 3) + " kg/c";
+}
