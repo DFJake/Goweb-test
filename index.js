@@ -15,10 +15,10 @@ function handleClickLogin(){
 
       var gNameNumber = guestList.indexOf(guestName);
       guestPass = document.getElementById("pass").value;
-      // alert("Добро пожаловать, "+guestName+"! " + guestPassList[guestList.indexOf(guestName)]);
 
       if (guestPass == guestPassList[guestList.indexOf(guestName)]) {
         alert("Добро пожаловать, "+guestName+"!");
+
       } else {
         alert("Неверный пароль!");
       };
@@ -29,6 +29,7 @@ function handleClickLogin(){
       document.getElementById("pass").value="";
   }
 
+}
 
 // Sign-in button
 document.querySelectorAll("button")[1].addEventListener("click", handleClickSignin);
@@ -36,14 +37,13 @@ document.querySelectorAll("button")[1].addEventListener("click", handleClickSign
 function handleClickSignin(){
     guestName = document.getElementById("username").value;
     guestPass = document.getElementById("pass").value;
+
     if (guestList.includes(guestName) == false) {
         guestList.push(document.getElementById("username").value);
         guestPassList.push(document.getElementById("pass").value);
     } else {
       alert("Пользователь с таким именем уже существует.");
     }
-
-}
 
 }
 
