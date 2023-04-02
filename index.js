@@ -1,5 +1,5 @@
 var guestList = ["Angela"];
-var guestPassList = [];
+var guestPassList = ["Angelapass"];
 
 
 
@@ -8,14 +8,26 @@ document.querySelectorAll("button")[0].addEventListener("click", handleClickLogi
 
 function handleClickLogin(){
   var guestName = document.getElementById("username").value;
-  var guestPass = document.getElementById("pass");
-  if (guestList.includes(guestName)) {
-      alert("Добро пожаловать, "+guestName+"!");
+
+  if (guestList.includes(guestName))  {
+
+      var gNameNumber = guestList.indexOf(guestName);
+      var guestPass = document.getElementById("pass").value;
+      // alert("Добро пожаловать, "+guestName+"! " + guestPassList[guestList.indexOf(guestName)]);
+
+      if (guestPassList.includes(guestPass)) {
+        alert("Добро пожаловать, "+guestName+"!");
+      } else {
+        alert("Неверный пароль!");
+      };
+
     } else {
       alert("Пользователь " + document.getElementById("username").value + " не зарегистрирован");
       document.getElementById("username").value="";
+      document.getElementById("pass").value="";
 
   }
+
 
 
 document.querySelectorAll("button")[1].addEventListener("click", handleClickSignin);
